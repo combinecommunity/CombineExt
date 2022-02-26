@@ -755,6 +755,101 @@ subscription = ints
 .finished
 ```
 
+------
+
+### fromAsync(priority:_:)
+
+Creates a Combine Publisher from an async function. The Publisher emits a value and then completes when the async function returns its result.
+The task that supports the async function is canceled when the publisher's subscription is canceled.
+An optional priority indicates the priority of the Task supporting the execution of the async function.
+
+```swift
+var value: Int {
+    get async {
+        3
+    }
+}
+
+Publishers
+    .fromAsync {
+        await value
+    }.sink {
+        print($0)
+    } receiveValue: {
+        print($0)
+    }
+```
+
+#### Output:
+
+```none
+3
+finished
+```
+
+------
+
+### fromThrowingAsync(priority:_:)
+
+Creates a Combine Publisher from a throwing async function
+The Publisher emits a value and completes or fail according the the async function execution result.
+The task that supports the async function is canceled when the publisher's subscription is canceled.
+An optional priority indicates the priority of the Task supporting the execution of the async function.
+
+```swift
+struct MyError: Error, CustomStringConvertible {
+    var description: String {
+        "Async Error"
+    }
+ }
+
+Publishers
+    .fromAsync { () async throws -> String in
+        throw MyError()
+    }.sink {
+        print($0)
+    } receiveValue: {
+        print($0)
+    }
+```
+
+#### Output:
+
+```none
+failure(Async Error)
+```
+
+### fromAsyncSequence(priority:_:)
+
+Creates a Combine Publisher from an async sequence.
+The Publisher emits values or fail according the the async sequence execution result.
+An optional priority indicates the priority of the Task supporting the execution of the async sequence.
+
+```swift
+let sequence = AsyncStream(Int.self) { continuation in
+    continuation.yield(1)
+    continuation.yield(2)
+    continuation.yield(3)
+    continuation.finish()
+}
+
+Publishers
+    .fromAsyncSequence(sequence).sink {
+        print($0)
+    } receiveValue: {
+        print($0)
+    }
+```
+
+#### Output:
+
+```none
+1
+2
+3
+finished
+```
+
 ## Publishers
 
 This section outlines some of the custom Combine publishers CombineExt provides
