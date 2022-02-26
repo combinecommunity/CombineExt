@@ -24,6 +24,8 @@
 /* Begin PBXBuildFile section */
 		1970A8AA25246FBD00799AB6 /* FilterMany.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1970A8A925246FBD00799AB6 /* FilterMany.swift */; };
 		1970A8B42524730500799AB6 /* FilterManyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1970A8B32524730400799AB6 /* FilterManyTests.swift */; };
+		1A2FF9A826E3D9770098C2D1 /* CompactScan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2FF9A726E3D9770098C2D1 /* CompactScan.swift */; };
+		1A2FF9AB26E3D9FC0098C2D1 /* CompactScanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2FF9A926E3D9800098C2D1 /* CompactScanTests.swift */; };
 		BF330EF624F1FFFE001281FC /* CombineSchedulers in Frameworks */ = {isa = PBXBuildFile; productRef = BF330EF524F1FFFE001281FC /* CombineSchedulers */; };
 		BF330EF924F20032001281FC /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF330EF824F20032001281FC /* Timer.swift */; };
 		BF330EFB24F20080001281FC /* Lock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF330EFA24F20080001281FC /* Lock.swift */; };
@@ -108,6 +110,8 @@
 /* Begin PBXFileReference section */
 		1970A8A925246FBD00799AB6 /* FilterMany.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterMany.swift; sourceTree = "<group>"; };
 		1970A8B32524730400799AB6 /* FilterManyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterManyTests.swift; sourceTree = "<group>"; };
+		1A2FF9A726E3D9770098C2D1 /* CompactScan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompactScan.swift; sourceTree = "<group>"; };
+		1A2FF9A926E3D9800098C2D1 /* CompactScanTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompactScanTests.swift; sourceTree = "<group>"; };
 		BF330EF824F20032001281FC /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		BF330EFA24F20080001281FC /* Lock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lock.swift; sourceTree = "<group>"; };
 		BF3D3B5C253B83F300D830ED /* IgnoreFailure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IgnoreFailure.swift; sourceTree = "<group>"; };
@@ -242,6 +246,7 @@
 				OBJ_18 /* AssignOwnership.swift */,
 				OBJ_19 /* AssignToMany.swift */,
 				OBJ_20 /* CombineLatestMany.swift */,
+				1A2FF9A726E3D9770098C2D1 /* CompactScan.swift */,
 				OBJ_21 /* Create.swift */,
 				OBJ_22 /* Dematerialize.swift */,
 				OBJ_23 /* FlatMapLatest.swift */,
@@ -290,6 +295,7 @@
 				OBJ_42 /* AssignOwnershipTests.swift */,
 				OBJ_43 /* AssignToManyTests.swift */,
 				OBJ_44 /* CombineLatestManyTests.swift */,
+				1A2FF9A926E3D9800098C2D1 /* CompactScanTests.swift */,
 				OBJ_45 /* CreateTests.swift */,
 				OBJ_46 /* CurrentValueRelayTests.swift */,
 				OBJ_47 /* DematerializeTests.swift */,
@@ -550,6 +556,7 @@
 				OBJ_123 /* AssignOwnershipTests.swift in Sources */,
 				OBJ_124 /* AssignToManyTests.swift in Sources */,
 				1970A8B42524730500799AB6 /* FilterManyTests.swift in Sources */,
+				1A2FF9AB26E3D9FC0098C2D1 /* CompactScanTests.swift in Sources */,
 				D836234A24EA9888002353AC /* MergeManyTests.swift in Sources */,
 				OBJ_125 /* CombineLatestManyTests.swift in Sources */,
 				BF3D3B67253B88E500D830ED /* IgnoreFailureTests.swift in Sources */,
@@ -581,6 +588,7 @@
 			buildActionMask = 0;
 			files = (
 				OBJ_79 /* DemandBuffer.swift in Sources */,
+				1A2FF9A826E3D9770098C2D1 /* CompactScan.swift in Sources */,
 				OBJ_80 /* Sink.swift in Sources */,
 				OBJ_81 /* Optional.swift in Sources */,
 				C387777C24E6BBE900FAD2D8 /* Nwise.swift in Sources */,

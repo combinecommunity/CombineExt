@@ -44,6 +44,7 @@ All operators, utilities and helpers respect Combine's publisher contract, inclu
 * [ignoreFailure](#ignoreFailure)
 * [mapToResult](#mapToResult)
 * [flatMapBatches(of:)](#flatMapBatchesof)
+* [compactScan()](#compactScan)
 
 ### Publishers
 * [AnyPublisher.create](#AnypublisherCreate)
@@ -754,6 +755,30 @@ subscription = ints
 [5, 6]
 .finished
 ```
+
+------
+
+### compactScan()
+
+Transforms elements from the upstream publisher by providing the current element to a closure along with the last value returned by the closure. If the closure returns a nil value, then the accumulator won't change until the next non-nil upstream publisher value.
+
+```swift
+let cancellable = (0...5)
+    .publisher
+    .compactScan(0) {
+        guard $1.isMultiple(of: 2) else { return nil }
+        return $0 + $1
+    }
+    .sink { print ("\($0)") }
+```
+
+#### Output
+
+```none
+0 2 6
+```
+
+The `tryCompactScan()` version behaves the same but with a throwing closure.
 
 ## Publishers
 
