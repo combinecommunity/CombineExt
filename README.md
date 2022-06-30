@@ -44,6 +44,7 @@ All operators, utilities and helpers respect Combine's publisher contract, inclu
 * [ignoreFailure](#ignoreFailure)
 * [mapToResult](#mapToResult)
 * [flatMapBatches(of:)](#flatMapBatchesof)
+* [allSatisfy](#allSatisfy)
 
 ### Publishers
 * [AnyPublisher.create](#AnypublisherCreate)
@@ -753,6 +754,38 @@ subscription = ints
 [3, 4]
 [5, 6]
 .finished
+```
+
+------
+
+### allSatisfy
+
+Returns a Boolean value indicating whether every element of a publisher `Collection` satisfies a given predicate.
+
+```swift
+let intArrayPublisher = PassthroughSubject<[Int], Never>()
+
+intArrayPublisher
+  .allSatisfy { $0.isMultiple(of: 2) }
+  .sink { print("All multiples of 2? \($0)") }
+
+intArrayPublisher.send([2, 4, 6, 8, 10])
+intArrayPublisher.send([2, 4, 6, 9, 10])
+
+let names = [Just("John"), Just("Jane"), Just("Jim"), Just("Jill"), Just("Joan")]
+
+names
+  .combineLatest()
+  .allSatisfy { $0.count <= 4 }
+  .sink { print("All short names? \($0)") }
+```
+
+#### Output
+
+```none
+All multiples of 2? true
+All multiples of 2? false
+All short names? true
 ```
 
 ## Publishers

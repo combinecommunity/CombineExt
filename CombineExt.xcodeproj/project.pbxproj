@@ -41,6 +41,8 @@
 		C387777F24E6BF8F00FAD2D8 /* NwiseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C387777D24E6BF6C00FAD2D8 /* NwiseTests.swift */; };
 		D836234824EA9446002353AC /* MergeMany.swift in Sources */ = {isa = PBXBuildFile; fileRef = D836234724EA9446002353AC /* MergeMany.swift */; };
 		D836234A24EA9888002353AC /* MergeManyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D836234924EA9888002353AC /* MergeManyTests.swift */; };
+		ECF0134D26B86DC000F1D286 /* AllSatisfy.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF0134C26B86DC000F1D286 /* AllSatisfy.swift */; };
+		ECF0135426B9B79900F1D286 /* AllSatisfyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF0135226B9B50000F1D286 /* AllSatisfyTests.swift */; };
 		OBJ_100 /* ZipMany.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* ZipMany.swift */; };
 		OBJ_101 /* CurrentValueRelay.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* CurrentValueRelay.swift */; };
 		OBJ_102 /* PassthroughRelay.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* PassthroughRelay.swift */; };
@@ -130,6 +132,8 @@
 		"CombineExt::CombineExtTests::Product" /* CombineExtTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = CombineExtTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D836234724EA9446002353AC /* MergeMany.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeMany.swift; sourceTree = "<group>"; };
 		D836234924EA9888002353AC /* MergeManyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeManyTests.swift; sourceTree = "<group>"; };
+		ECF0134C26B86DC000F1D286 /* AllSatisfy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllSatisfy.swift; sourceTree = "<group>"; };
+		ECF0135226B9B50000F1D286 /* AllSatisfyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllSatisfyTests.swift; sourceTree = "<group>"; };
 		OBJ_10 /* Sink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sink.swift; sourceTree = "<group>"; };
 		OBJ_12 /* Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
 		OBJ_14 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -246,6 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				BF330EF724F2001F001281FC /* Internal */,
+				ECF0134C26B86DC000F1D286 /* AllSatisfy.swift */,
 				OBJ_17 /* Amb.swift */,
 				OBJ_18 /* AssignOwnership.swift */,
 				OBJ_19 /* AssignToMany.swift */,
@@ -296,6 +301,7 @@
 		OBJ_40 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				ECF0135226B9B50000F1D286 /* AllSatisfyTests.swift */,
 				OBJ_41 /* AmbTests.swift */,
 				OBJ_42 /* AssignOwnershipTests.swift */,
 				OBJ_43 /* AssignToManyTests.swift */,
@@ -569,6 +575,7 @@
 				OBJ_127 /* CurrentValueRelayTests.swift in Sources */,
 				C387777F24E6BF8F00FAD2D8 /* NwiseTests.swift in Sources */,
 				OBJ_128 /* DematerializeTests.swift in Sources */,
+				ECF0135426B9B79900F1D286 /* AllSatisfyTests.swift in Sources */,
 				OBJ_129 /* FlatMapLatestTests.swift in Sources */,
 				OBJ_130 /* MapManyTests.swift in Sources */,
 				OBJ_131 /* MaterializeTests.swift in Sources */,
@@ -628,6 +635,7 @@
 				BF330EF924F20032001281FC /* Timer.swift in Sources */,
 				OBJ_101 /* CurrentValueRelay.swift in Sources */,
 				OBJ_102 /* PassthroughRelay.swift in Sources */,
+				ECF0134D26B86DC000F1D286 /* AllSatisfy.swift in Sources */,
 				OBJ_103 /* Relay.swift in Sources */,
 				OBJ_104 /* ReplaySubject.swift in Sources */,
 			);
