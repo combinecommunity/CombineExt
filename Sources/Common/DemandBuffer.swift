@@ -27,6 +27,11 @@ class DemandBuffer<S: Subscriber> {
     private var completion: Subscribers.Completion<S.Failure>?
     private var demandState = Demand()
 
+    /// The remaining demand, i.e. the number of values the subscriber still expects
+    var remainingDemand: Subscribers.Demand {
+        demandState.requested - demandState.sent
+    }
+
     /// Initialize a new demand buffer for a provided downstream subscriber
     ///
     /// - parameter subscriber: The downstream subscriber demanding events
@@ -72,7 +77,7 @@ class DemandBuffer<S: Subscriber> {
 
     /// Signal to the buffer that the downstream requested new demand
     ///
-    /// - note: The buffer will attempt to flush as many events rqeuested
+    /// - note: The buffer will attempt to flush as many events requested
     ///         by the downstream at this point
     func demand(_ demand: Subscribers.Demand) -> Subscribers.Demand {
         flush(adding: demand)
@@ -112,7 +117,7 @@ class DemandBuffer<S: Subscriber> {
             return .none
         }
 
-        let sentDemand = demandState.requested - demandState.sent
+        let sentDemand = remainingDemand
         demandState.sent += sentDemand
         return sentDemand
     }
