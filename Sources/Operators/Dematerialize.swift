@@ -40,7 +40,7 @@ public extension Publishers {
     }
 }
 
-// MARK: - Subscrription
+// MARK: - Subscription
 @available(OSX 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
 private extension Publishers.Dematerialize {
     class Subscription<Downstream: Subscriber>: Combine.Subscription
