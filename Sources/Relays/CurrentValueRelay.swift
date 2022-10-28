@@ -17,7 +17,11 @@ import Combine
 /// - note: Unlike PassthroughRelay, CurrentValueRelay maintains a buffer of the most recently published value.
 @available(OSX 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
 public class CurrentValueRelay<Output>: Relay {
-    public var value: Output { storage.value }
+    public var value: Output {
+        get { storage.value }
+        set { storage.value = newValue }
+    }
+    
     private let storage: CurrentValueSubject<Output, Never>
     private var subscriptions = [Subscription<CurrentValueSubject<Output, Never>,
                                               AnySubscriber<Output, Never>>]()
