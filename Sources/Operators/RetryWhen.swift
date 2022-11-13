@@ -44,7 +44,7 @@ extension Publishers.RetryWhen {
     class Subscription<Downstream>: Combine.Subscription where Downstream: Subscriber, Downstream.Input == Upstream.Output, Downstream.Failure == Upstream.Failure {
         private let upstream: Upstream
         private let downstream: Downstream
-        private let errorSubject = PassthroughSubject<Upstream.Failure, Never>()
+        private let errorSubject = CurrentValueSubject<Upstream.Failure?, Never>(nil)
         private var sink: Sink<Upstream, Downstream>?
         private var cancellable: AnyCancellable?
 
@@ -64,7 +64,7 @@ extension Publishers.RetryWhen {
                     return nil
                 }
             )
-            self.cancellable = errorTrigger(errorSubject.eraseToAnyPublisher())
+            self.cancellable = errorTrigger(errorSubject.compactMap { $0 }.eraseToAnyPublisher())
                 .sink(
                     receiveCompletion: { [sink] completion in
                         switch completion {
@@ -81,7 +81,6 @@ extension Publishers.RetryWhen {
                         upstream.subscribe(sink)
                     }
                 )
-            upstream.subscribe(sink!)
         }
 
         func request(_ demand: Subscribers.Demand) {

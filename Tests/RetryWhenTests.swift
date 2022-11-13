@@ -42,7 +42,7 @@ class RetryWhenTests: XCTestCase {
 
     func testSuccessfulRetry() {
         var times = 0
-
+        var retriesCount = 0
         var expectedOutput: Int?
 
         var completion: Subscribers.Completion<RetryWhenTests.MyError>?
@@ -57,7 +57,9 @@ class RetryWhenTests: XCTestCase {
             }
         })
         .retryWhen { error in
-            error.map { _ in }
+            error
+                .handleEvents(receiveOutput: { _ in retriesCount += 1})
+                .map { _ in }
         }
         .sink(
             receiveCompletion: { completion = $0 },
@@ -70,6 +72,7 @@ class RetryWhenTests: XCTestCase {
         )
         XCTAssertEqual(completion, .finished)
         XCTAssertEqual(times, 2)
+        XCTAssertEqual(retriesCount, 1)
     }
 
     func testRetryFailure() {
