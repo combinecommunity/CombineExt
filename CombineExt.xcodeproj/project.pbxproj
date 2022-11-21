@@ -28,6 +28,7 @@
 		63FEBC9527E9FE9000E934AD /* FlatMapFirstTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FEBC9427E9FE9000E934AD /* FlatMapFirstTests.swift */; };
 		712E36C82711B79000A2AAFE /* RetryWhen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712E36C72711B79000A2AAFE /* RetryWhen.swift */; };
 		7182326F26DAAF230026BAD3 /* RetryWhenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7182326E26DAAF230026BAD3 /* RetryWhenTests.swift */; };
+		86569294292B342A0027D795 /* Publisher+OptionalSink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86569293292B342A0027D795 /* Publisher+OptionalSink.swift */; };
 		BF330EF924F20032001281FC /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF330EF824F20032001281FC /* Timer.swift */; };
 		BF330EFB24F20080001281FC /* Lock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF330EFA24F20080001281FC /* Lock.swift */; };
 		BF3D3B5D253B83F300D830ED /* IgnoreFailure.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3D3B5C253B83F300D830ED /* IgnoreFailure.swift */; };
@@ -124,6 +125,7 @@
 		63FEBC9427E9FE9000E934AD /* FlatMapFirstTests.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = FlatMapFirstTests.swift; sourceTree = "<group>"; };
 		712E36C72711B79000A2AAFE /* RetryWhen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetryWhen.swift; sourceTree = "<group>"; };
 		7182326E26DAAF230026BAD3 /* RetryWhenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetryWhenTests.swift; sourceTree = "<group>"; };
+		86569293292B342A0027D795 /* Publisher+OptionalSink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+OptionalSink.swift"; sourceTree = "<group>"; };
 		BF330EF824F20032001281FC /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		BF330EFA24F20080001281FC /* Lock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lock.swift; sourceTree = "<group>"; };
 		BF3D3B5C253B83F300D830ED /* IgnoreFailure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IgnoreFailure.swift; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_12 /* Optional.swift */,
+				86569293292B342A0027D795 /* Publisher+OptionalSink.swift */,
 			);
 			path = Convenience;
 			sourceTree = "<group>";
@@ -646,6 +649,7 @@
 				OBJ_94 /* PrefixDuration.swift in Sources */,
 				63FEBC9327E9FCDB00E934AD /* FlatMapFirst.swift in Sources */,
 				OBJ_95 /* RemoveAllDuplicates.swift in Sources */,
+				86569294292B342A0027D795 /* Publisher+OptionalSink.swift in Sources */,
 				OBJ_96 /* SetOutputType.swift in Sources */,
 				OBJ_97 /* ShareReplay.swift in Sources */,
 				BF45214E259C0C610065E60E /* PrefixWhileBehavior.swift in Sources */,
