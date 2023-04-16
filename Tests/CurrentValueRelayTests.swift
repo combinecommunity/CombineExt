@@ -75,6 +75,11 @@ class CurrentValueRelayTests: XCTestCase {
 
         XCTAssertFalse(completed)
         XCTAssertEqual(values, ["initial", "1", "2", "3"])
+
+        relay!.accept("4")
+
+        XCTAssertFalse(completed)
+        XCTAssertEqual(values, ["initial", "1", "2", "3", "4"])
     }
 
     func testSubscribeRelay_CurrentValues() {

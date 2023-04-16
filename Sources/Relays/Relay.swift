@@ -19,13 +19,6 @@ public protocol Relay: Publisher where Failure == Never {
     ///
     /// - Parameter value: The value to send.
     func accept(_ value: Output)
-
-    /// Attaches the specified publisher to this relay.
-    ///
-    /// - parameter publisher: An infallible publisher with the relay's Output type
-    ///
-    /// - returns: `AnyCancellable`
-    func subscribe<P: Publisher>(_ publisher: P) -> AnyCancellable where P.Failure == Failure, P.Output == Output
 }
 
 @available(OSX 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
@@ -36,7 +29,10 @@ public extension Publisher where Failure == Never {
     ///
     /// - returns: `AnyCancellable`
     func subscribe<R: Relay>(_ relay: R) -> AnyCancellable where R.Output == Output {
-        relay.subscribe(self)
+        sink(receiveValue: { output in
+            relay.accept(output)
+        })
+
     }
 }
 

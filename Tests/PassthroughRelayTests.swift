@@ -90,6 +90,11 @@ class PassthroughRelayTests: XCTestCase {
 
         XCTAssertFalse(completed)
         XCTAssertEqual(values, ["1", "2", "3"])
+
+        relay!.accept("4")
+
+        XCTAssertFalse(completed)
+        XCTAssertEqual(values, ["1", "2", "3", "4"])
     }
 
     func testSubscribeRelay_Passthroughs() {
@@ -133,7 +138,7 @@ class PassthroughRelayTests: XCTestCase {
         input.accept("3")
 
         XCTAssertFalse(completed)
-        XCTAssertEqual(values, ["initial", "1", "2", "3"])
+        XCTAssertEqual(values, ["1", "2", "3"])
     }
 }
 #endif

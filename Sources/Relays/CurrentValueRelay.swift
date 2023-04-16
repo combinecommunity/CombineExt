@@ -42,14 +42,6 @@ public class CurrentValueRelay<Output>: Relay {
         subscriber.receive(subscription: subscription)
     }
 
-    public func subscribe<P: Publisher>(_ publisher: P) -> AnyCancellable where Output == P.Output, P.Failure == Never {
-        publisher.subscribe(storage)
-    }
-
-    public func subscribe<P: Relay>(_ publisher: P) -> AnyCancellable where Output == P.Output {
-        publisher.subscribe(storage)
-    }
-
     deinit {
         // Send a finished event upon dealloation
         subscriptions.forEach { $0.forceFinish() }
