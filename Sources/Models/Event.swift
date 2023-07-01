@@ -15,6 +15,10 @@ public enum Event<Output, Failure: Swift.Error> {
     case finished
 }
 
+// MARK: - Codable Conformance
+@available(OSX 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
+extension Event: Codable where Output: Codable, Failure: Codable {}
+
 // MARK: - Equatable Conformance
 @available(OSX 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
 extension Event: Equatable where Output: Equatable, Failure: Equatable {
