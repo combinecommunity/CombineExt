@@ -74,6 +74,7 @@ private extension PassthroughRelay {
         func forceFinish() {
             self.sink?.shouldForwardCompletion = true
             self.sink?.receive(completion: .finished)
+            self.sink = nil
         }
 
         func request(_ demand: Subscribers.Demand) {
@@ -81,7 +82,7 @@ private extension PassthroughRelay {
         }
 
         func cancel() {
-            sink = nil
+            forceFinish()
         }
     }
 }
