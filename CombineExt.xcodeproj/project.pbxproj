@@ -49,6 +49,8 @@
 		EA0D86D5287D19DC0085356E /* MapToResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0D86D2287D19DC0085356E /* MapToResultTests.swift */; };
 		EA0D86D6287D19DC0085356E /* MapToValueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0D86D3287D19DC0085356E /* MapToValueTests.swift */; };
 		EAEAAC72287FB3C900288379 /* CombineSchedulers in Frameworks */ = {isa = PBXBuildFile; productRef = EAEAAC71287FB3C900288379 /* CombineSchedulers */; };
+		E17B23B526DFBFBD008E595F /* WithUnretained.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17B23B426DFBFBD008E595F /* WithUnretained.swift */; };
+		E17B23B726DFFA56008E595F /* WithUnretainedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17B23B626DFFA56008E595F /* WithUnretainedTests.swift */; };
 		OBJ_100 /* ZipMany.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* ZipMany.swift */; };
 		OBJ_101 /* CurrentValueRelay.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* CurrentValueRelay.swift */; };
 		OBJ_102 /* PassthroughRelay.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* PassthroughRelay.swift */; };
@@ -146,6 +148,8 @@
 		EA0D86D1287D19DC0085356E /* EnumeratedTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumeratedTests.swift; sourceTree = "<group>"; };
 		EA0D86D2287D19DC0085356E /* MapToResultTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapToResultTests.swift; sourceTree = "<group>"; };
 		EA0D86D3287D19DC0085356E /* MapToValueTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapToValueTests.swift; sourceTree = "<group>"; };
+		E17B23B426DFBFBD008E595F /* WithUnretained.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithUnretained.swift; sourceTree = "<group>"; };
+		E17B23B626DFFA56008E595F /* WithUnretainedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithUnretainedTests.swift; sourceTree = "<group>"; };
 		OBJ_10 /* Sink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sink.swift; sourceTree = "<group>"; };
 		OBJ_12 /* Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
 		OBJ_14 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -289,6 +293,7 @@
 				1970A8A925246FBD00799AB6 /* FilterMany.swift */,
 				BFADDC8025BCE4C200465E9B /* FlatMapBatches.swift */,
 				63FEBC9227E9FCDB00E934AD /* FlatMapFirst.swift */,
+				E17B23B426DFBFBD008E595F /* WithUnretained.swift */,
 			);
 			path = Operators;
 			sourceTree = "<group>";
@@ -347,6 +352,7 @@
 				OBJ_61 /* ZipManyTests.swift */,
 				BFADDC8A25BCE91E00465E9B /* FlatMapBatchesTests.swift */,
 				63FEBC9427E9FE9000E934AD /* FlatMapFirstTests.swift */,
+				E17B23B626DFFA56008E595F /* WithUnretainedTests.swift */,
 			);
 			path = Tests;
 			sourceTree = SOURCE_ROOT;
@@ -590,6 +596,7 @@
 				OBJ_126 /* CreateTests.swift in Sources */,
 				OBJ_127 /* CurrentValueRelayTests.swift in Sources */,
 				C387777F24E6BF8F00FAD2D8 /* NwiseTests.swift in Sources */,
+				E17B23B726DFFA56008E595F /* WithUnretainedTests.swift in Sources */,
 				OBJ_128 /* DematerializeTests.swift in Sources */,
 				OBJ_129 /* FlatMapLatestTests.swift in Sources */,
 				OBJ_130 /* MapManyTests.swift in Sources */,
@@ -626,6 +633,7 @@
 				EA0D86CE287D19CC0085356E /* MapToValue.swift in Sources */,
 				OBJ_83 /* ObjectOwnership.swift in Sources */,
 				OBJ_84 /* Amb.swift in Sources */,
+				E17B23B526DFBFBD008E595F /* WithUnretained.swift in Sources */,
 				OBJ_85 /* AssignOwnership.swift in Sources */,
 				OBJ_86 /* AssignToMany.swift in Sources */,
 				BF3D3B5D253B83F300D830ED /* IgnoreFailure.swift in Sources */,
